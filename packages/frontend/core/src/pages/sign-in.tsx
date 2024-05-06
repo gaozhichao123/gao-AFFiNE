@@ -74,6 +74,7 @@ export const SignIn = () => {
 
   const onSetAuthState = useCallback(
     (state: AuthProps['state']) => {
+      console.log('frontend/core/src/pages/sign-in.tsx', 'onSetAuthState');
       setAuthAtom(prev => ({ ...prev, state }));
     },
     [setAuthAtom]

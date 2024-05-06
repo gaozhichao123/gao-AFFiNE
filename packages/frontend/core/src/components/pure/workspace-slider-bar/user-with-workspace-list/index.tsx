@@ -31,6 +31,7 @@ export const SignInItem = () => {
     mixpanel.track('Button', {
       resolve: 'SignIn',
     });
+    console.log('runtimeConfig', runtimeConfig, !runtimeConfig.enableCloud);
     if (!runtimeConfig.enableCloud) {
       setDisableCloudOpen(true);
     } else {
@@ -57,7 +58,8 @@ export const SignInItem = () => {
             {t['com.affine.workspace.cloud.auth']()}
           </div>
           <div className={styles.signInTextSecondary}>
-            {t['com.affine.workspace.cloud.description']()}
+            {/* {t['com.affine.workspace.cloud.description']()} */}
+            用手机号登陆
           </div>
         </div>
       </div>

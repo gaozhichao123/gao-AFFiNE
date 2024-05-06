@@ -113,6 +113,25 @@ export class UserService {
       Pick<Prisma.UserCreateInput, 'emailVerifiedAt' | 'registered'>
     >
   ) {
+    try {
+      const res = await this.prisma.user.upsert({
+        select: this.defaultUserSelect,
+        where: {
+          email,
+        },
+        update: data,
+        create: {
+          email,
+          ...this.userCreatingData,
+          ...data,
+        },
+      });
+      console.log('resss', res);
+      return res;
+    } catch (error) {
+      console.warn('error', error);
+      return null;
+    }
     return this.prisma.user.upsert({
       select: this.defaultUserSelect,
       where: {

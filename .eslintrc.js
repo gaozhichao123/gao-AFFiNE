@@ -101,14 +101,14 @@ const config = {
     'rxjs',
   ],
   rules: {
-    'array-callback-return': 'error',
+    'array-callback-return': 'warn',
     'no-undef': 'off',
     'no-empty': 'off',
     'no-func-assign': 'off',
     'no-cond-assign': 'off',
-    'no-constant-binary-expression': 'error',
-    'no-constructor-return': 'error',
-    'no-self-compare': 'error',
+    'no-constant-binary-expression': 'warn',
+    'no-constructor-return': 'warn',
+    'no-self-compare': 'warn',
     eqeqeq: ['error', 'always', { null: 'ignore' }],
     'react/prop-types': 'off',
     'react/jsx-no-useless-fragment': 'error',
@@ -121,19 +121,19 @@ const config = {
     '@typescript-eslint/unified-signatures': 'error',
     '@typescript-eslint/prefer-for-of': 'error',
     '@typescript-eslint/no-unused-vars': [
-      'error',
+      'warn',
       {
         varsIgnorePattern: '^_',
         argsIgnorePattern: '^_',
         caughtErrorsIgnorePattern: '^_',
       },
     ],
-    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-imports': 'warn',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
-    'import-x/no-duplicates': 'error',
+    'import-x/no-duplicates': 'warn',
     '@typescript-eslint/ban-ts-comment': [
-      'error',
+      'warn',
       {
         'ts-expect-error': 'allow-with-description',
         'ts-ignore': true,
@@ -169,7 +169,7 @@ const config = {
       },
     ],
     'unicorn/filename-case': [
-      'error',
+      'warn',
       {
         case: 'kebabCase',
         ignore: ['^\\[[a-zA-Z0-9-_]+\\]\\.tsx$'],

@@ -88,7 +88,6 @@ export const AuthPanel: FC<AuthProps> = ({
   onSignedIn,
 }) => {
   const CurrentPanel = useMemo(() => {
-    console.log('state', state);
     return config[state];
   }, [state]);
 
